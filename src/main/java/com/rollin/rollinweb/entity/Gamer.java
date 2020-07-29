@@ -1,11 +1,10 @@
 package com.rollin.rollinweb.entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Gamer {
@@ -15,15 +14,15 @@ public class Gamer {
     private Long id;
     private String firstName;
     private String lastName;
-
-
-
     private String pseudo;
     private Date birthday;
     private String livesIn;
     private String biography;
-
     private boolean noob;
+
+    @ManyToMany
+    @JoinTable(name = "gamer_party", joinColumns = @JoinColumn(name = "gamer_id"),inverseJoinColumns = @JoinColumn(name="party_id"))
+    private List<Party> parties = new ArrayList<>();
 
     public Gamer() {
     }
@@ -89,6 +88,13 @@ public class Gamer {
 
     public void setNoob(boolean noob) {
         this.noob = noob;
+    }
+
+    public List<Party> getParties(){
+        return parties;
+    }
+    public void setParties(List<Party> parties){
+        this.parties = parties;
     }
 
 }

@@ -1,9 +1,8 @@
 package com.rollin.rollinweb.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Party {
@@ -13,13 +12,12 @@ public class Party {
     private String name;
     private Long capacity;
     private String city;
-
-
-
     private String genre;
     public String description;
 
+    @ManyToMany(mappedBy = "parties")
 
+    private List<Gamer> gamers = new ArrayList<>();
 
     public Party() {
     }
@@ -69,5 +67,12 @@ public class Party {
 
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    public List<Gamer> getGamers(){
+        return gamers;
+    }
+    public void setGamers(List<Gamer> gamers){
+        this.gamers = gamers;
     }
 }
