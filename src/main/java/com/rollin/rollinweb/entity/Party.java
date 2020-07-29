@@ -13,8 +13,10 @@ public class Party {
     private String name;
     private Long capacity;
     private String city;
+    public String description;
 
-    public Party(){}
+    public Party() {
+    }
 
     public Long getId() {
         return id;
@@ -48,5 +50,11 @@ public class Party {
         this.city = city;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
