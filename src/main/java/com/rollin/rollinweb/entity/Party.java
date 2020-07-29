@@ -15,6 +15,7 @@ public class Party {
     private String genre;
     public String description;
 
+
     @ManyToMany(mappedBy = "parties")
 
     private List<Gamer> gamers = new ArrayList<>();
