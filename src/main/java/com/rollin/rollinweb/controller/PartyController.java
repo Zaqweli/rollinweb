@@ -21,10 +21,9 @@ public class PartyController {
 
     @GetMapping("/parties")
     public String getAll(Model model) {
-        // TODO : find all parties
+
 
         model.addAttribute("parties", repository.findAll());
-
 
         return "parties";
     }
@@ -33,7 +32,7 @@ public class PartyController {
     public String getParty(Model model,
                             @RequestParam(required = false) Long id) {
 
-        // TODO : find one party by id
+
 
         Party party = new Party();
         if (id != null){
@@ -49,7 +48,6 @@ public class PartyController {
     @PostMapping("/party")
     public String postParty(@ModelAttribute Party party) {
 
-        // TODO : create or update a party
 
         repository.save(party);
         return "redirect:/parties";
@@ -57,8 +55,6 @@ public class PartyController {
 
     @GetMapping("/party/delete")
     public String deleteParty(@RequestParam Long id) {
-
-        // TODO : delete a party
 
         repository.deleteById(id);
 
