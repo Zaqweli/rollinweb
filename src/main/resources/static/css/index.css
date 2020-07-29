@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  background-color: black;
+  background-color: ghostwhite;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -12,35 +12,35 @@ body {
 h1,
 h2,
 h4 {
-  color: white;
+  color: black;
   font-weight: 700;
 }
 
 h3 {
-  color: white;
+  color: black;
 }
 
 h3 a {
-  color: white;
+  color: black;
 }
 
 h3 a:hover {
-  color: #81efb2;
+  color: #55ef4f;
 }
 
 .breadcrumb-custom {
-  background-color: black;
-  color: white;
+  background-color: ghostwhite;
+  color: black;
   font-size: 1.3rem;
 }
 
 .breadcrumb-custom a {
-  background-color: black;
-  color: white;
+  background-color: ghostwhite;
+  color: black;
 }
 
 .breadcrumb-custom a:hover {
-  color: #81efb2;
+  color: #55ef4f;
 }
 
 .container {

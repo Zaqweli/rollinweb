@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Gamer List</title>
+    <link rel="shortcut icon" type="imglogodice.png" th:href="@{/img/logodice.png}" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+    <link href="../static/css/index.css" rel="stylesheet" th:href="@{/css/index.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
+<header th:replace="fragments/header.html :: top"></header>
 <style>
     table {
         border-collapse: collapse;

@@ -1,13 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Roll'in Web</title>
+
+    <link rel="shortcut icon" type="imglogodice.png" th:href="@{/img/logodice.png}" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+    <link href="../static/css/index.css" rel="stylesheet" th:href="@{/css/index.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
+<header th:replace="fragments/header.html :: top"></header>
 <body>
 <h1>All games around</h1>
 <a href="/gamers">Browse all gamers</a>
 <br><br>
 <a href="/parties">Browse all parties</a>
+
+<script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
+        th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"></script>
 </body>
 </html>
