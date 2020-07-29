@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Party List</title>
-    <link rel="shortcut icon" type="imglogodice.png" th:href="@{/img/d20-green-logo.png}" />
+    <link rel="shortcut icon" type="imglogodice.png" th:href="@{/img/d20-green-logo.png}"/>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
@@ -59,7 +59,10 @@
         <td th:text="${party.genre}">genre</td>
         <td th:text="${party.description}">description</td>
         <td><a th:href="@{/party(id=${party.id})}">Edit</a></td>
+        <td><a th:href="@{/party/register(id=${party.id})}">Join</a></td>
         <td><a th:href="@{/party/delete(id=${party.id})}">Remove</a></td>
+
+
     </tr>
     </tbody>
 </table>

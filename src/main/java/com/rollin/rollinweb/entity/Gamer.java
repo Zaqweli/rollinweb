@@ -21,7 +21,7 @@ public class Gamer {
     private boolean noob;
 
     @ManyToMany
-    @JoinTable(name = "gamer_party", joinColumns = @JoinColumn(name = "gamer_id"),inverseJoinColumns = @JoinColumn(name="party_id"))
+    @JoinTable(name = "gamer_party", joinColumns = @JoinColumn(name = "gamer_id"), inverseJoinColumns = @JoinColumn(name = "party_id"))
     private List<Party> parties = new ArrayList<>();
 
     public Gamer() {
@@ -62,6 +62,7 @@ public class Gamer {
     public String getLivesIn() {
         return livesIn;
     }
+
     public String getPseudo() {
         return pseudo;
     }
@@ -90,10 +91,11 @@ public class Gamer {
         this.noob = noob;
     }
 
-    public List<Party> getParties(){
+    public List<Party> getParties() {
         return parties;
     }
-    public void setParties(List<Party> parties){
+
+    public void setParties(List<Party> parties) {
         this.parties = parties;
     }
 

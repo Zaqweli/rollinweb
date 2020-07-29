@@ -1,4 +1,4 @@
 CREATE DATABASE  IF NOT EXISTS `rpg` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `spring_jpa_quest`;
+USE `rpg`;
 DROP TABLE IF EXISTS `gamer`;
 DROP TABLE IF EXISTS `party`;

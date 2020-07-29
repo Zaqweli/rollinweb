@@ -61,6 +61,7 @@ public class Party {
     public void setDescription(String description) {
         this.description = description;
     }
+
     public String getGenre() {
         return genre;
     }
@@ -69,10 +70,11 @@ public class Party {
         this.genre = genre;
     }
 
-    public List<Gamer> getGamers(){
+    public List<Gamer> getGamers() {
         return gamers;
     }
-    public void setGamers(List<Gamer> gamers){
+
+    public void setGamers(List<Gamer> gamers) {
         this.gamers = gamers;
     }
 }

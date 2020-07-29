@@ -40,18 +40,21 @@ public class GamerController {
     }
 
     @PostMapping("/gamer")
-    public String postGamer(@ModelAttribute Gamer gamer){
+    public String postGamer(@ModelAttribute Gamer gamer) {
 
         repository.save(gamer);
         return "redirect:/gamers";
     }
+
     @GetMapping("/gamer/delete")
     public String deleteGamer(@RequestParam Long id) {
 
         repository.deleteById(id);
 
-        return "redicrect:/gamers";
+        return "redirect:/gamers";
     }
+
+
 }
 
 

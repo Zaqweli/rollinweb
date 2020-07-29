@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Parties Registration</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<form action="/party/register" method="post">
+    <input name="idGamer" th:value="${gamer.id}" type="hidden">
+    <h1 th:text="|${gamer.firstName} ${gamer.lastName}|"></h1>
+    <label for="party">Register in a party:</label>
+    <select id="party" name="idParty">
+        <option th:each="party : ${allParties}" th:text="${party.name}"
+                th:value="${party.id}">gamer name
+        </option>
+    </select>
+    <input type="submit" value="Send">
+</form>
+<h3>MJ parties:</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="party : ${gamer.parties}">
+        <td th:text="${party.id}">id</td>
+        <td th:text="${party.name}">name</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<a href="/party">Return to party list</a>
+</body>
+</html>
