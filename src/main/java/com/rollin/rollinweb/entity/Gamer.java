@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import java.sql.Date;
 
 @Entity
-public class Gamer {
+public class Gamer extends BaseModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
