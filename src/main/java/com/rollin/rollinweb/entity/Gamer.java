@@ -15,9 +15,14 @@ public class Gamer {
     private Long id;
     private String firstName;
     private String lastName;
+
+
+
+    private String pseudo;
     private Date birthday;
     private String livesIn;
     private String biography;
+
     private boolean noob;
 
     public Gamer() {
@@ -57,6 +62,13 @@ public class Gamer {
 
     public String getLivesIn() {
         return livesIn;
+    }
+    public String getPseudo() {
+        return pseudo;
+    }
+
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
     }
 
     public void setLivesIn(String livesIn) {

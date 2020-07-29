@@ -44,6 +44,7 @@
         <th>Name</th>
         <th>Capacity</th>
         <th>City</th>
+        <th>Genre</th>
         <th>Description</th>
         <th></th>
         <th></th>
@@ -55,6 +56,7 @@
         <td th:text="${party.name}">name</td>
         <td th:text="${party.capacity}">capacity</td>
         <td th:text="${party.city}">city</td>
+        <td th:text="${party.genre}">genre</td>
         <td th:text="${party.description}">description</td>
         <td><a th:href="@{/party(id=${party.id})}">Edit</a></td>
         <td><a th:href="@{/party/delete(id=${party.id})}">Remove</a></td>

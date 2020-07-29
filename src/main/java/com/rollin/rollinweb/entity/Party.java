@@ -13,7 +13,13 @@ public class Party {
     private String name;
     private Long capacity;
     private String city;
+
+
+
+    private String genre;
     public String description;
+
+
 
     public Party() {
     }
@@ -56,5 +62,12 @@ public class Party {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 }
