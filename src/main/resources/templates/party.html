@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Party</title>
+</head>
+<body>
+<h3 th:text="${party.id} ? 'Edit Party' : 'Create Party'">School</h3>
+<form method="post" th:action="@{/party}" th:object="${party}">
+    <input name="id" th:field="*{id}" type="hidden">
+    <label for="party-name">Name:</label>
+    <input id="party-name" name="name" placeholder="Call of Star Dragons" required th:field="*{name}" type="text">
+    <br><br>
+    <label for="party-capacity">Capacity:</label>
+    <input id="party-capacity" name="capacity" placeholder="5" required th:field="*{capacity}" type="number">
+    <br><br>
+    <label for="party-city">City:</label>
+    <input id="party-city" name="city" placeholder="Pau" required th:field="*{city}" type="text">
+    <br><br>
+    <input type="submit" value="Send">
+</form>
+<br>
+<a href="/parties">Return to the list</a>
+</body>
+</html>

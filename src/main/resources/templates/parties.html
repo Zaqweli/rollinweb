@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Party List</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th, td {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 5px;
+        text-align: left;
+    }
+</style>
+<body>
+<h3>Party</h3>
+<a href="/party">Add a new party !</a>
+<br><br>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Capacity</th>
+        <th>City</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="party : ${parties}">
+        <td th:text="${party.id}">id</td>
+        <td th:text="${party.name}">name</td>
+        <td th:text="${party.capacity}">capacity</td>
+        <td th:text="${party.city}">city</td>
+        <td><a th:href="@{/party(id=${party.id})}">Edit</a></td>
+        <td><a th:href="@{/party/delete(id=${party.id})}">Remove</a></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<a href="/">Return to the index</a>
+</body>
+</html>

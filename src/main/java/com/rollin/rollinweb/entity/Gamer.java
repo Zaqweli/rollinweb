@@ -16,7 +16,7 @@ public class Gamer {
     private String firstName;
     private String lastName;
     private Date birthday;
-    private String livesin;
+    private String livesIn;
     private String biography;
     private boolean noob;
 
@@ -55,12 +55,12 @@ public class Gamer {
         this.birthday = birthday;
     }
 
-    public String getLivesin() {
-        return livesin;
+    public String getLivesIn() {
+        return livesIn;
     }
 
-    public void setLivesin(String livesin) {
-        this.livesin = livesin;
+    public void setLivesIn(String livesIn) {
+        this.livesIn = livesIn;
     }
 
     public String getBiography() {

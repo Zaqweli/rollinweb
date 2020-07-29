@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gamer List</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th, td {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 5px;
+        text-align: left;
+    }
+</style>
+<body>
+<h3>Gamers</h3>
+<a href="/gamer">Add a new gamer !</a>
+<br><br>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Birthday</th>
+        <th>Living place</th>
+        <th>A little word?</th>
+        <th>Noob</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="gamer : ${gamers}">
+        <td th:text="${gamer.id}">id</td>
+        <td th:text="${gamer.firstName}">first name</td>
+        <td th:text="${gamer.lastName}">last name</td>
+        <td th:text="${gamer.birthday}">birthday</td>
+        <td th:text="${gamer.livesIn}">living place</td>
+        <td th:text="${gamer.biography}">A little word?</td>
+        <td th:text="${gamer.noob}">noob</td>
+        <td><a th:href="@{/gamer(id=${gamer.id})}">Edit</a></td>
+        <td><a th:href="@{/gamer/delete(id=${gamer.id})}">Remove</a></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<a href="/">Return to the index</a>
+</body>
+</html>
