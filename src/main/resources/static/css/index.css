@@ -1,0 +1,113 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h4 {
+  color: white;
+  font-weight: 700;
+}
+
+h3 {
+  color: white;
+}
+
+h3 a {
+  color: white;
+}
+
+h3 a:hover {
+  color: #81efb2;
+}
+
+.breadcrumb-custom {
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.breadcrumb-custom a {
+  background-color: black;
+  color: white;
+}
+
+.breadcrumb-custom a:hover {
+  color: #81efb2;
+}
+
+.container {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-custom {
+  border-color: #808080;
+  background-color: #333333;
+  color: white;
+}
+
+.header-custom {
+  background-color: #808080;
+  color: azure;
+  font-weight: bold;
+}
+
+.form-control::placeholder {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+select option {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+select {
+  font-weight: bold;
+  font-size: 0.8rem !important;
+}
+
+.nav-link {
+  color: #81efb2;
+}
+
+.nav-link:hover {
+  color: #81efb2;
+}
+
+.button-custom {
+  background-color: #81efb2;
+  font-weight: bold;
+}
+
+.button-dangerCustom {
+  background-color: #c93a34;
+  color: white !important;
+  font-weight: bold;
+}
+
+.legend-scale {
+  max-width: 140px;
+}
+
+.list-group-item {
+  padding-left: 10px;
+  padding-right: 0px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
